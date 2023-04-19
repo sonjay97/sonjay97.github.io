@@ -159,7 +159,7 @@ div.button-container {
 
 .letter {
   opacity: 0;
-  animation: fadeIn 2s linear forwards;
+  animation: fadeIn 1s linear forwards;
 }
 
 @keyframes fadeIn {
