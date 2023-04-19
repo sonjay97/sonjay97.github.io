@@ -136,6 +136,10 @@ p {
 .projects {animation-delay: 0s;}
 .hobbies {animation-delay: 0s;}
 .contact {animation-delay: 0s;}
+.hiking {animation-delay: 1s;}
+.rock {animation-delay: 2s;}
+.videography {animation-delay: 3s;}
+.fullstack {animation-delay: 4s;}
 
 .wolfscheduler {animation-delay: .5s;}
 .concertwebsite {animation-delay: 3s;}
@@ -167,6 +171,46 @@ p {
     0% {opacity: 0;}
     100% {opacity: 1;}
   }
+
+
+  /**************************Carousel Modifiers************************/
+  .carousel-image {
+    max-width: 60%; /* Adjust this value to control the size of the images */
+    max-height: 20%;
+    margin: 0 auto; /* Center the images */
+  }
+
+  
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  background-image: none;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: solid black;
+  border-width: 2px 2px 0 0;
+}
+
+.carousel-control-prev-icon::before {
+  transform: rotate(-135deg);
+}
+
+.carousel-control-next-icon::before {
+  transform: rotate(45deg);
+}
+
+.carousel-fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+
 
 
 
