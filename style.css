@@ -78,8 +78,7 @@ a:hover {
 
 .linkedin-button:hover,
 .github-button:hover,
-.youtube-button:hover,
-.email-button:hover {
+.youtube-button:hover {
     background-color: #696969;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -87,12 +86,25 @@ a:hover {
 
 .linkedin-button:active,
 .github-button:active,
-.youtube-button:active,
-.email-button:active {
+.youtube-button:active {
     transform: translateY(0);
     box-shadow: none;
 }
 
+.linkedin-button.fade-in,
+.github-button.fade-in,
+.youtube-button.fade-in,
+.email-button.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.linkedin-button.fade-in.linkedin-delay,
+.github-button.fade-in.github-delay,
+.youtube-button.fade-in.youtube-delay,
+.email-button.fade-in.email-delay {
+  animation-delay: 1s;
+}
 
 div.button-container {
     margin-bottom: 15px;
@@ -124,6 +136,18 @@ p {
 .projects {animation-delay: 0s;}
 .hobbies {animation-delay: 0s;}
 .contact {animation-delay: 0s;}
+
+.wolfscheduler {animation-delay: .5s;}
+.concertwebsite {animation-delay: 3s;}
+
+.github-button.fade-in.github-delay {animation-delay: 1.5s;}
+.youtube-button.fade-in.youtube-delay {animation-delay: 2s;}
+.email-button.fade-in.email-delay {animation-delay: 2.5s;}
+
+.linkedin-delay {animation-delay: 1s;}
+.github-delay {animation-delay: 1.5s;}
+.youtube-delay {animation-delay: 2s;}
+.email-delay {animation-delay: 2.5s;}
 
 .paragraph-1 {animation-delay: 1s;}
 .paragraph-2 {animation-delay: 3s;}
