@@ -1,3 +1,7 @@
+header {
+  background-color: white;
+}
+
 .nav-item {
   display: flex;
   justify-content: space-between;
