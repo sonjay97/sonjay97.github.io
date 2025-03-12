@@ -1,11 +1,82 @@
-header {
-  background-color: white;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background: #f7ffe4;
-  margin: 5px 0;
+/* Variables */
+:root {
+    --color-primary: hsl(146, 50%, 90%); /* text */
+    --color-secondary: hsl(146, 50%, 10%); /* background */
+    --color-tertiary: hsl(206, 80%, 20%);
+    --color-accent: hsl(86, 80%, 20%);
+    --ff: "Noto Sans JP", serif;
+    --ff2: "Fira Sans", serif;
+    --p: 1rem/1.5em var(--ff);
+    --h1: 600 3rem/1.2em var(--ff2);
+    --h2: 600 2rem/1.2 em var(--ff2);
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+}
+.dark {
+    --color-primary: hsl(146, 50%, 10%);
+    --color-secondary: hsl(146, 50%, 90%);
+    --color-tertiary: hsl(206, 80%, 80%);
+    --color-accent: hsl(86, 80%, 80%);
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    text-wrap: balance;
+    font: var(--p);
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+h1 {
+    font: var(--h1);
+}
+h2 {
+    font: var(--h2);
+    margin: var(--spacing2) 0;
+}
+p {
+    font: var(--h2);
+    margin: var(--spacing2) 0;
+}
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-secondary)
+}
+.btn,
+button {
+    all: unset;
+    display: inline-block;
+    margin: var(--spacing2);
+    background: var(--color-accent);
+    padding: var(--spacing2) var(--spacing3);
+    color: var(--color-primary);
+    border-radius: var(--spacing2);
+    border-bottom: solid var(--spacing1) var(--color-accent);
+    font: var(--p);
+    cursor: pointer;
+}
+.bth:hover,
+button:hover {
+    background: linear-gradient(180deg, var(--color-accent), var(--color-tertiary));
+    transition: 0.3s ease-in-out;
+}
+img {
+    width: 100%;
 }
