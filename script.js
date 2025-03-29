@@ -1,16 +1,6 @@
-//header
-class THeader extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <header>
-                <img class="logo" src="img/profilePic.png" />
-                <nav>
-                    <a href="#">Posts</a>
-                    <a href="#">Projects</a>
-                    <a href="#">About</a>
-                </nav>
-            </header>
-        `;
+// Array to store blog posts
+const blogPosts = [
+    {
+        title: "Easy way to learn data structures, algorithms, and system design for FAANG+", date: "March 29, 2025",
     }
-}
-customElements.define("t-header", THeader);
+]
