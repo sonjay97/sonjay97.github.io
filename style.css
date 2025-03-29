@@ -7,12 +7,12 @@
 
 /* Variables */
 :root {
-    --color-primary: hsl(146, 50%, 90%); /* text */
-    --color-secondary: hsl(146, 50%, 10%); /* background */
+    --color-primary: hsl(146, 50%, 10%);
+    --color-secondary: hsl(0, 0%, 98%);
     --color-tertiary: hsl(206, 80%, 20%);
     --color-accent: hsl(86, 80%, 20%);
-    --ff: "Noto Sans JP", serif;
-    --ff2: "Fira Sans", serif;
+    --ff: Arial, sans-serif;
+    --ff2: Arial, sans-serif;
     --p: 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
     --h2: 600 2rem/1.2 em var(--ff2);
@@ -25,7 +25,8 @@
     --spacing7: 160px;
 }
 .dark {
-    --color-primary: hsl(146, 50%, 10%);
+    --color-primary: hsl(146, 50%, 90%); /* text */
+    --color-secondary: hsl(146, 50%, 10%); /* background */
     --color-secondary: hsl(146, 50%, 90%);
     --color-tertiary: hsl(206, 80%, 80%);
     --color-accent: hsl(86, 80%, 80%);
@@ -52,12 +53,28 @@ p {
     font: var(--h2);
     margin: var(--spacing2) 0;
 }
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    background: hsl(86, 76%, 94%);
+    padding: var(--spacing3);
+    margin: var(--spacing2) 0;
+    border-radius: var(--spacing2);
+}
 a {
     color: var(--color-primary);
     text-decoration: none;
 }
 a:hover {
-    color: var(--color-secondary)
+    color: var(--color-accent)
+}
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing1);
 }
 .btn,
 button {
