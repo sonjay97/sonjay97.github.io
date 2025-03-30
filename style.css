@@ -16,6 +16,8 @@
     --p: 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
     --h2: 600 2rem/1.2em var(--ff2);
+    --website-title: 1.6rem;
+    --blog-title: 1.2rem;
     --spacing1: 4px;
     --spacing2: 8px;
     --spacing3: 16px;
@@ -45,11 +47,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing4);
+}
+.footer {
+    text-align: center;
+    margin-bottom: var(--spacing4);
+}
+.container {
+    padding-top: var(--spacing5);
+    padding-bottom: var(--spacing6);
+    text-align: center;
 }
 .title {
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: var(--website-title);
     color: var(--color-primary)
+}
+.title-icon {
+    width: var(--spacing5);
+    height: var(--spacing5);
+    margin-left: var(--spacing7);
+    vertical-align: baseline; /* Aligns it with text */
 }
 h1 {
     font: var(--h1);
@@ -59,8 +80,8 @@ h2 {
     margin: var(--spacing2) 0;
 }
 h3 {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: var(--spacing5);
+    margin-bottom: var(--spacing5);
 }
 p {
     font: var(--h2);
@@ -84,23 +105,23 @@ a {
 a:hover {
     color: var(--color-accent)
 }
-.radio-card {
-    padding: 20px;
-    border-radius: 12px;
+.card {
+    padding: var(--spacing4);
+    border-radius: var(--spacing3);
     background: var(--color-secondary);
     border: 1px solid var(--color-primary);
-    border-radius: 10px;
+    border-radius: var(--spacing2);
     text-align: left;
     width: 90%;
 }
-.radio-cards {
+.cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Add spacing to avoid overlap */
+    gap: var(--spacing4); /* Add spacing to avoid overlap */
     justify-content: center; /* Centers the cards in the container */
 }
 .blog-title {
-    font-size: 1.2rem;
+    font-size: var(--blog-title);
     text-align: center;
     display: block;
     text-decoration: none; /* Removes underline */
@@ -127,11 +148,7 @@ button:hover {
     background: linear-gradient(180deg, var(--color-accent), var(--color-tertiary));
     transition: 0.3s ease-in-out;
 }
-.container {
-    padding-top: 40px;
-    padding-bottom: 60px;
-    text-align: center;
-}
+
 img {
     width: 100%;
 }
