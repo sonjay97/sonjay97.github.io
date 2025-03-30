@@ -1,223 +1,56 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Variables */
 :root {
-    --color-primary: hsl(0, 0%, 0%);
-    --color-secondary: hsl(0, 0%, 100%);
-    --color-tertiary: hsl(247, 100%, 79%);
-    --color-accent: hsl(259, 100%, 76%);
-    --ff: Arial, sans-serif;
-    --ff2: Arial, sans-serif;
-    --p: 1rem/1.5em var(--ff);
-    --h1: 600 3rem/1.2em var(--ff2);
-    --h2: 600 2rem/1.2em var(--ff2);
-    --website-title: 1.6rem;
-    --blog-title: 1.2rem;
-    --spacing1: 4px;
-    --spacing2: 8px;
-    --spacing3: 16px;
-    --spacing4: 20px;
-    --spacing5: 40px;
-    --spacing6: 80px;
-    --spacing7: 160px;
+    --color-primary: hsl(250, 50%, 90%); /* background */
+    --color-secondary: hsl(250, 50%, 10%); /* text */
+    --color-tertiary: hsl(310, 80%, 20%);
+    --color-accent: hsl(190, 80%, 20%);
+    --ff1: 'Montserrat', sans-serif;
+    --bold: 700;
+    --title-size: 1.5rem;
 }
 .dark {
-    --color-primary: hsl(187, 50%, 10%);
-    --color-secondary: hsl(187, 50%, 90%);
-    --color-tertiary: hsl(247, 80%, 80%);
-    --color-accent: hsl(127, 80%, 80%);
+    --color-primary: hsl(250, 50%, 10%); /* background */
+    --color-secondary: hsl(250, 50%, 90%); /* text */
+    --color-tertiary: hsl(310, 80%, 80%);
+    --color-accent: hsl(190, 80%, 80%);
 }
 
-/* Global Styles */
-html {
-    scroll-behavior: smooth;
-}
 body {
-    text-wrap: balance;
-    font: var(--p);
-    background: var(--color-secondary);
-    color: var(--color-primary);
+    width: 90%;
+    max-width: 540px;
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-family: var(--ff1);
 }
+
 header {
+    font-family: var(--ff1);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing4);
+    align-items: center;  
+    margin-bottom: 20px;
 }
-.footer {
-    text-align: center;
-    margin-bottom: var(--spacing4);
-}
-.container {
-    padding-top: var(--spacing5);
-    padding-bottom: var(--spacing6);
-    text-align: center;
-}
-.title {
+
+header svg {
+    fill: var(--accent);
+    width: 40px;
+    margin-right: 4px;
+  }
+
+.jay {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    font-size: var(--website-title);
-    color: var(--color-primary)
+    gap: 6px;
+    padding: 20px 0px;
 }
-.title-icon {
-    width: var(--spacing5);
-    height: var(--spacing5);
-    margin-left: var(--spacing7);
-    vertical-align: baseline; /* Aligns it with text */
-}
-h1 {
-    font: var(--h1);
-}
-h2 {
-    font: var(--h2);
-    margin: var(--spacing2) 0;
-}
-h3 {
-    margin-top: var(--spacing5);
-    margin-bottom: var(--spacing5);
-}
-p {
-    font: var(--h2);
-    margin: var(--spacing2) 0;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-li {
-    background: hsl(86, 76%, 94%);
-    padding: var(--spacing3);
-    margin: var(--spacing2) 0;
-    border-radius: var(--spacing2);
-}
+
 a {
-    color: var(--color-primary);
+    font-weight: var(--bold);
     text-decoration: none;
 }
-a:hover {
-    color: var(--color-accent)
-}
-.card {
-    padding: var(--spacing4);
-    border-radius: var(--spacing3);
-    background: var(--color-secondary);
-    border: 1px solid var(--color-primary);
-    border-radius: var(--spacing2);
-    text-align: left;
-    width: 90%;
-}
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing4); /* Add spacing to avoid overlap */
-    justify-content: center; /* Centers the cards in the container */
-}
-.blog-title {
-    font-size: var(--blog-title);
-    text-align: center;
-    display: block;
-    text-decoration: none; /* Removes underline */
-    color: var(--color-primary); /* Default link color */
-}
-.blog-title:hover {
-    color: var(--color-accent); /* Change color on hover */
-}
-.btn,
-button {
-    all: unset;
-    display: inline-block;
-    margin: var(--spacing2);
-    background: var(--color-accent);
-    padding: var(--spacing2) var(--spacing3);
-    color: var(--color-primary);
-    border-radius: var(--spacing2);
-    border-bottom: solid var(--spacing1) var(--color-accent);
-    font: var(--p);
-    cursor: pointer;
-}
-.bth:hover,
-button:hover {
-    background: linear-gradient(180deg, var(--color-accent), var(--color-tertiary));
-    transition: 0.3s ease-in-out;
+
+#mode svg{
+    fill: var(--color-tertiary);
+    width: 20px;
 }
 
-img {
-    width: 100%;
-}
-
-/* Utility Classes */
-section {
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-.center {
-    text-align: center;
-}
-.hidden {
-    display: none;
-}
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing4);
-    flex-wrap: wrap;
-}
-.flex > * {
-    flex: 1;
-    min-width: 400px;
-}
-.reverse {
-    flex-direction: row-reverse;
-}
-.padding1 {
-    padding: var(--spacing1) 0;
-}
-.padding2 {
-    padding: var(--spacing2) 0;
-}
-.padding3 {
-    padding: var(--spacing3) 0;
-}
-.padding4 {
-    padding: var(--spacing4) 0;
-}
-.padding5 {
-    padding: var(--spacing5) 0;
-}
-.padding6 {
-    padding: var(--spacing6) 0;
-}
-.padding7 {
-    padding: var(--spacing7) 0;
-}
-.margin1 {
-    margin: var(--spacing1) auto;
-}
-.margin2 {
-    margin: var(--spacing2) auto;
-}
-.margin3 {
-    margin: var(--spacing3) auto;
-}
-.margin4 {
-    margin: var(--spacing4) auto;
-}
-.margin5 {
-    margin: var(--spacing5) auto;
-}
-.margin6 {
-    margin: var(--spacing6) auto;
-}
-.margin7 {
-    margin: var(--spacing7) auto;
-}
