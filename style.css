@@ -7,15 +7,15 @@
 
 /* Variables */
 :root {
-    --color-primary: hsl(146, 50%, 10%);
-    --color-secondary: hsl(0, 0%, 98%);
-    --color-tertiary: hsl(206, 80%, 20%);
-    --color-accent: hsl(86, 80%, 20%);
+    --color-primary: hsl(0, 0%, 0%);
+    --color-secondary: hsl(0, 0%, 100%);
+    --color-tertiary: hsl(247, 100%, 79%);
+    --color-accent: hsl(259, 100%, 76%);
     --ff: Arial, sans-serif;
     --ff2: Arial, sans-serif;
     --p: 1rem/1.5em var(--ff);
     --h1: 600 3rem/1.2em var(--ff2);
-    --h2: 600 2rem/1.2 em var(--ff2);
+    --h2: 600 2rem/1.2em var(--ff2);
     --spacing1: 4px;
     --spacing2: 8px;
     --spacing3: 16px;
@@ -25,11 +25,10 @@
     --spacing7: 160px;
 }
 .dark {
-    --color-primary: hsl(146, 50%, 90%); /* text */
-    --color-secondary: hsl(146, 50%, 10%); /* background */
-    --color-secondary: hsl(146, 50%, 90%);
-    --color-tertiary: hsl(206, 80%, 80%);
-    --color-accent: hsl(86, 80%, 80%);
+    --color-primary: hsl(187, 50%, 10%);
+    --color-secondary: hsl(187, 50%, 90%);
+    --color-tertiary: hsl(247, 80%, 80%);
+    --color-accent: hsl(127, 80%, 80%);
 }
 
 /* Global Styles */
@@ -42,12 +41,26 @@ body {
     background: var(--color-secondary);
     color: var(--color-primary);
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title {
+    font-size: 1.5rem;
+    color: var(--color-primary)
+}
 h1 {
     font: var(--h1);
 }
 h2 {
     font: var(--h2);
     margin: var(--spacing2) 0;
+}
+h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 p {
     font: var(--h2);
@@ -71,10 +84,30 @@ a {
 a:hover {
     color: var(--color-accent)
 }
-.blog-post {
+.radio-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    text-align: left;
+    width: 90%;
+}
+.radio-cards {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing1);
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing to avoid overlap */
+    justify-content: center; /* Centers the cards in the container */
+}
+.blog-title {
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    text-decoration: none; /* Removes underline */
+    color: var(--color-primary); /* Default link color */
+}
+.blog-title:hover {
+    color: var(--color-accent); /* Change color on hover */
 }
 .btn,
 button {
@@ -93,6 +126,11 @@ button {
 button:hover {
     background: linear-gradient(180deg, var(--color-accent), var(--color-tertiary));
     transition: 0.3s ease-in-out;
+}
+.container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
 }
 img {
     width: 100%;
