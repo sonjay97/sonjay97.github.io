@@ -8,6 +8,7 @@
     --title-size: 1.5rem;
     --article-size: 1rem;
     --date-size: 0.75rem;
+    --article-a-size: 1.2rem;
 }
 .dark {
     --color-primary: hsl(250, 50%, 10%); /* background */
@@ -45,6 +46,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+article {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+article h1 {
+    font-size: var(--article-a-size);
+    margin-bottom: 1rem;
 }
 
 .jay {
@@ -111,7 +122,6 @@ a.jay:hover {
 }
 
 .publish-date {
-    font-style: italic;
     font-size: var(--date-size);
     color: var(--color-secondary);
     margin-top: -1rem;
@@ -133,4 +143,13 @@ a.jay:hover {
 
 .social-links svg:hover {
     fill: var(--color-tertiary);
+}
+
+.article-title a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.article-title a:hover {
+    color: var(--color-tertiary);
 }

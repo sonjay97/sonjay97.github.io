@@ -1,4 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    // Wait for header to be loaded
+    const waitForHeader = () => {
+        return new Promise(resolve => {
+            const checkHeader = () => {
+                const modeToggle = document.getElementById('mode');
+                if (modeToggle) {
+                    resolve();
+                } else {
+                    setTimeout(checkHeader, 100);
+                }
+            };
+            checkHeader();
+        });
+    };
+
+    await waitForHeader();
+
     const modeToggle = document.getElementById('mode');
     const sunIcon = document.querySelector('.sun-icon');
     const moonIcon = document.querySelector('.moon-icon');
