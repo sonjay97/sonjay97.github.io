@@ -153,3 +153,12 @@ a.jay:hover {
 .article-title a:hover {
     color: var(--color-tertiary);
 }
+
+.loading {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.loaded {
+    opacity: 1;
+}
