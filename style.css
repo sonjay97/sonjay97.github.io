@@ -7,6 +7,7 @@
     --bold: 700;
     --title-size: 1.5rem;
     --article-size: 1rem;
+    --date-size: 0.75rem;
 }
 .dark {
     --color-primary: hsl(250, 50%, 10%); /* background */
@@ -38,6 +39,14 @@ header svg {
     margin-right: 4px;
   }
 
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .jay {
     display: flex;
     align-items: center;
@@ -51,13 +60,12 @@ a {
 }
 
 a.jay {
-    color: var(--color-secondary); /* This will match your text color */
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
-/* Optional: Add hover effect */
 a.jay:hover {
-    color: var(--color-tertiary); /* Changes color on hover */
+    color: var(--color-tertiary);
 }
 
 #mode {
@@ -69,13 +77,11 @@ a.jay:hover {
     width: 20px;
 }
 
-/* Add this new rule for the sun icon */
 #mode .sun-icon {
-    width: 28px; /* Slightly larger than the default 20px */
-    height: 28px; /* Add height to maintain aspect ratio */
+    width: 28px;
+    height: 28px; 
 }
 
-/* Show/hide icons based on theme */
 .dark .sun-icon {
     display: none !important;
 }
@@ -92,24 +98,39 @@ a.jay:hover {
     display: none;
 }
 
-.article-container {
-    border: 1px solid var(--color-secondary);
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 1rem 0;
-    text-align: center;
-    cursor: pointer;
-    transition: all .001s ease;
-}
-
-.article-container:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-}
-
 .article-title {
-    margin: 0;
+    margin: 1.5rem 0;
     font-size: var(--article-size);
     font-weight: var(--bold);
+    color: var(--color-secondary);
+    cursor: pointer;
 }
 
+.article-title:hover {
+    color: var(--color-tertiary);
+}
+
+.publish-date {
+    font-style: italic;
+    font-size: var(--date-size);
+    color: var(--color-secondary);
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+    transition: fill 0.2s ease;
+}
+
+.social-links svg:hover {
+    fill: var(--color-tertiary);
+}
