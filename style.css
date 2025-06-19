@@ -2,10 +2,11 @@
     --color-primary: hsl(250, 50%, 90%); /* background */
     --color-secondary: hsl(250, 50%, 10%); /* text */
     --color-tertiary: hsl(310, 80%, 20%);
-    --color-accent: hsl(190, 80%, 20%);
+    --color-accent: hsl(190, 80%, 39%);
     --ff1: 'Montserrat', sans-serif;
     --bold: 700;
     --title-size: 1.5rem;
+    --article-size: 1rem;
 }
 .dark {
     --color-primary: hsl(250, 50%, 10%); /* background */
@@ -49,8 +50,66 @@ a {
     text-decoration: none;
 }
 
-#mode svg{
+a.jay {
+    color: var(--color-secondary); /* This will match your text color */
+    text-decoration: none;
+}
+
+/* Optional: Add hover effect */
+a.jay:hover {
+    color: var(--color-tertiary); /* Changes color on hover */
+}
+
+#mode {
+    cursor: pointer;
+}
+
+#mode svg {
     fill: var(--color-tertiary);
     width: 20px;
+}
+
+/* Add this new rule for the sun icon */
+#mode .sun-icon {
+    width: 28px; /* Slightly larger than the default 20px */
+    height: 28px; /* Add height to maintain aspect ratio */
+}
+
+/* Show/hide icons based on theme */
+.dark .sun-icon {
+    display: none !important;
+}
+
+.dark .moon-icon {
+    display: block;
+}
+
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+.article-container {
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all .001s ease;
+}
+
+.article-container:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.article-title {
+    margin: 0;
+    font-size: var(--article-size);
+    font-weight: var(--bold);
 }
 
