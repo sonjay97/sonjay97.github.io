@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How I built A Redis LRU Cache With Python - Jay Shah</title>
+
+    <title>Redis ElastiCache</title>
+
     <script>
         const storedMode = localStorage.getItem('darkMode');
         if (storedMode === null || storedMode === 'true') {
             document.documentElement.classList.add('dark');
         }
     </script>
+
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script src="../components/loadComponents.js"></script>
     <script src="../script.js"></script>
+
 </head>
 
 <body class="loading">
     <main>
+
         <article>
-            <h1>How I built A Redis LRU Cache With Python</h1>
-            <p class="publish-date">Published: April 15, 2025</p>
+
+            <h1>
+                How I built A Redis LRU Cache With Python & AWS
+            </h1>
+
+            <p class="publish-date">
+                Published: April 15, 2025
+            </p>
             
             <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 1em;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg" alt="Redis Logo" style="height: 20px;" />
@@ -28,18 +42,27 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Python_logo_%28icon_only%29.svg" alt="Python Logo" style="height: 20px;" />
             </div>
             
-            <p>I recently wanted to optimize the latency of calls being made to an API I made. The API updates the prices of orders placed on a storefront that sells things like hoodies and art work. I update the order price based on some rules such as where the order originates from and what category the order falls under. These rules are stored in a postgres db for fast OLTP workloads but I wanted to make it faster.
+            <p>
+                I recently wanted to optimize the latency of calls being made to an API I made. The API updates the prices of orders placed on a storefront that sells things like hoodies and art work. I update the order price based on some rules such as where the order originates from and what category the order falls under. These rules are stored in a postgres db for fast OLTP workloads but I wanted to make it faster.
             </p>
 
-            <p>I decided on using AWS Elasticache with Redis as a caching layer on top of postgres. A caching layer would really improve the speed of my api calls since I'd no longer has to access postgres for all the rule lookups I wanted to do. Specifically, a LRU cache would be the most efficient.
+            <p>
+                I decided on using AWS Elasticache with Redis as a caching layer on top of my postgres db. A caching layer would really improve the speed of my api calls since I'd no longer have to access postgres for rule lookups. Specifically, a LRU cache would be the most efficient for my use case.
             </p>
 
-            <p>The first thing I saw when getting my free version of Redis set up was the AWS Elasticache dashboard. 
+            <p>
+                The first thing I saw when getting Redis Elasticache set up was the AWS Elasticache dashboard.
             </p>
 
             <img src="../images/AWS-Elasticache-Setup.png" alt="AWS ElastiCache Setup Page" style="max-width: 100%;" />
             </p>
+
+            <p>
+                I did some basic setup here. Most options I want to keep default, I don't need a highly customized setup since I'm not F500 company handling 10K requests a second. Though, if needed I could pretty easily customize the setup to handle that thouroughput.
+            </p>
+
         </article>
+
     </main>
 </body>
 </html>
