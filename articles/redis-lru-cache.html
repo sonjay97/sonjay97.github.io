@@ -28,13 +28,14 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Python_logo_%28icon_only%29.svg" alt="Python Logo" style="height: 20px;" />
             </div>
             
-            <p>I recently wanted to optimize the latency of calls being made to an API I made.</p>
+            <p>I recently wanted to optimize the latency of calls being made to an API I made. The API updates the prices of orders placed on a storefront that sells things like hoodies and art work. I update the order price based on some rules such as where the order originates from and what category the order falls under. These rules are stored in a postgres db for fast OLTP workloads but I wanted to make it faster.
+            </p>
 
-            <p></p>
+            <p>I decided on using AWS Elasticache with Redis as a caching layer on top of postgres. A caching layer would really improve the speed of my api calls since I'd no longer has to access postgres for all the rule lookups I wanted to do. Specifically, a LRU cache would be the most efficient.
+            </p>
 
-            <p></p>
-
-            <p>The first thing I saw when getting my free version of Redis set up was the AWS Elasticache dashboard.</p>
+            <p>The first thing I saw when getting my free version of Redis set up was the AWS Elasticache dashboard. 
+            </p>
 
             <img src="../images/AWS-Elasticache-Setup.png" alt="AWS ElastiCache Setup Page" style="max-width: 100%;" />
             </p>
