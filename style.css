@@ -71,12 +71,12 @@ a {
 }
 
 a.jay {
-    color: var(--color-secondary);
+    color: var(--color-tertiary);
     text-decoration: none;
 }
 
 a.jay:hover {
-    color: var(--color-tertiary);
+    color: var(--color-accent);
 }
 
 #mode {
@@ -118,7 +118,7 @@ a.jay:hover {
 }
 
 .article-title:hover {
-    color: var(--color-tertiary);
+    color: var(--color-accent);
 }
 
 .publish-date {
@@ -137,12 +137,12 @@ a.jay:hover {
 .social-links svg {
     width: 24px;
     height: 24px;
-    fill: var(--color-secondary);
+    fill: var(--color-tertiary);
     transition: fill 0.2s ease;
 }
 
 .social-links svg:hover {
-    fill: var(--color-tertiary);
+    fill: var(--color-accent);
 }
 
 .article-title a {
@@ -151,7 +151,7 @@ a.jay:hover {
 }
 
 .article-title a:hover {
-    color: var(--color-tertiary);
+    color: var(--color-accent);
 }
 
 .loading {

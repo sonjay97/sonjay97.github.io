@@ -22,12 +22,21 @@
             <h1>How I built A Redis LRU Cache With Python</h1>
             <p class="publish-date">Published: April 15, 2025</p>
             
+            <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 1em;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg" alt="Redis Logo" style="height: 20px;" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" style="height: 20px;" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Python_logo_%28icon_only%29.svg" alt="Python Logo" style="height: 20px;" />
+            </div>
             
-            <p>I recently had a project where I needed to optimize the latency of calls being made to a microservice. The "microservice" in question was really just a dockerized rest API that updated prices on orders according to given rules such as the country of origin for the order (think tariff rates).</p> The rules were stored in a Snowflake table and when order details were passed to the API (microservice, whatever you wanna call it), rules would be checked via the table. My goal was to cache the most recently used rules and get rid of all the "least recently used" ones, hence the idea for a LRU cache. But then I got to thinking, what better way to efficiently cache objects then with in-memory storage. Thus began my idea to use Redis.</p>
+            <p>I recently wanted to optimize the latency of calls being made to an API I made.</p>
 
-            Now I have never used Redis before. As a somewhat new-ish developer (2 yoe as of time of writing) I didn't know what Redis was till a very senior developer at work mentioned it and piqued my curiosity. Once I did some research and realized how powerful it is I figured it would pay dividends to create a project using Redis.
+            <p></p>
 
-            Redis is pretty cool. But learning how to use it to have impact on real world issues would be even cooler. 
+            <p></p>
+
+            <p>The first thing I saw when getting my free version of Redis set up was the AWS Elasticache dashboard.</p>
+
+            <img src="../images/AWS-Elasticache-Setup.png" alt="AWS ElastiCache Setup Page" style="max-width: 100%;" />
             </p>
         </article>
     </main>
