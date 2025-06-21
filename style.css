@@ -94,7 +94,7 @@ a.jay:hover {
 }
 
 .dark .sun-icon {
-    display: none !important;
+    display: none;
 }
 
 .dark .moon-icon {
@@ -109,6 +109,11 @@ a.jay:hover {
     display: none;
 }
 
+.moon-icon:hover, .sun-icon:hover {
+    fill: var(--color-tertiary);
+    transition: fill 0.2s;
+}
+
 .article-title {
     margin: 1.5rem 0;
     font-size: var(--article-size);
@@ -118,7 +123,7 @@ a.jay:hover {
 }
 
 .article-title:hover {
-    color: var(--color-accent);
+    color: var(--color-tertiary);
 }
 
 .publish-date {
@@ -151,7 +156,7 @@ a.jay:hover {
 }
 
 .article-title a:hover {
-    color: var(--color-accent);
+    color: var(--color-tertiary);
 }
 
 .loading {
