@@ -4,6 +4,7 @@
     --color-tertiary: hsl(310, 80%, 20%);
     --color-accent: hsl(190, 80%, 39%);
     --ff1: 'Montserrat', sans-serif;
+    --ff2: 'Forum', serif;
     --bold: 700;
     --title-size: 1.5rem;
     --article-size: 1rem;
@@ -23,7 +24,7 @@ body {
     margin: 0 auto;
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    font-family: var(--ff1);
+    font-family: var(--ff2);
 }
 
 header {
