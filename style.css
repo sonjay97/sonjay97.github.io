@@ -4,7 +4,7 @@
     --color-tertiary: hsl(310, 80%, 20%);
     --color-accent: hsl(190, 80%, 39%);
     --ff1: 'Montserrat', sans-serif;
-    --ff2: 'Forum', serif;
+    --ff2: 'Crimson Text', serif;
     --bold: 700;
     --title-size: 1.5rem;
     --article-size: 1rem;
@@ -20,7 +20,7 @@
 
 body {
     width: 90%;
-    max-width: 540px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: var(--color-primary);
     color: var(--color-secondary);
@@ -152,6 +152,7 @@ a.jay:hover {
 }
 
 .article-title a {
+    font-family: var(--ff1);
     color: var(--color-secondary);
     text-decoration: none;
 }
