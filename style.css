@@ -124,6 +124,7 @@ a.jay:hover {
 }
 
 .article-title {
+    font-family: var(--ff1);
     margin: 1.5rem 0;
     font-size: var(--article-size);
     font-weight: var(--bold);
