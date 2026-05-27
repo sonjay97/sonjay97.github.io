@@ -55,8 +55,16 @@ article {
 }
 
 article h1 {
+    font-family: var(--ff1);
     font-size: var(--article-a-size);
     margin-bottom: 1rem;
+}
+
+article h3 {
+    font-family: var(--ff1);
+    font-size: var(--article-size);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .jay {
@@ -152,7 +160,6 @@ a.jay:hover {
 }
 
 .article-title a {
-    font-family: var(--ff1);
     color: var(--color-secondary);
     text-decoration: none;
 }
